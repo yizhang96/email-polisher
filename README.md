@@ -2,7 +2,7 @@
 
 Chrome extension that polishes Gmail drafts with selectable tone/length, optional thread context, and a model selector.
 
-[Screenshot placeholder: ./email-polisher.png]
+![Screenshot](./email-polisher.png)
 
 ## Features
 - Floating pill next to the cursor for one-click polishing
