@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Email Polisher (Gmail)",
+    "version": "0.1.0",
+    "description": "Rewrite Gmail drafts with tone/length presets and one-tap polishing.",
+    "permissions": ["storage", "scripting", "activeTab"],
+    "host_permissions": ["https://mail.google.com/*"],
+    "background": { "service_worker": "background/worker.js", "type": "module" },
+    "options_page": "options.html",
+    "content_scripts": [
+  {
+    "matches": ["https://mail.google.com/*"],
+    "js": ["content/gmail.js"],
+    "css": ["styles/panel.css"],
+    "run_at": "document_idle",
+    "all_frames": true
+  }
+],
+    "action": { "default_title": "Email Polisher" }
+  }
+  

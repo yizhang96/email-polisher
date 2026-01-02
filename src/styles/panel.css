@@ -1,0 +1,121 @@
+/* Floating pill that follows the caret */
+#ep-pill {
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 6px 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    cursor: pointer;
+    font-size: 13px;
+    z-index: 2147483646;
+    opacity: 0.6;
+    transition: opacity 120ms ease, filter 120ms ease;
+  }
+  #ep-pill:hover {
+    opacity: 1;
+    filter: brightness(0.98);
+  }
+  
+  /* Panel */
+  #ep-panel {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 320px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 24px rgba(0,0,0,.12);
+    z-index: 2147483647;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  #ep-panel strong { font-size: 15px; }
+  #ep-panel label { font-size: 13px; font-weight: 600; }
+  #ep-panel textarea#ep-context {
+    box-sizing: border-box;
+    font-size: 13px;
+  }
+  #ep-panel textarea#ep-context::placeholder { font-size: 12px; }
+  #ep-panel .ep-check { font-size: 13px; }
+  #ep-panel .ep-seg {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+  #ep-panel .ep-seg button {
+    font-size: 13px;
+    margin-right: 6px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    cursor: pointer;
+  }
+  #ep-panel .ep-seg button:last-child { margin-right: 0; }
+  #ep-panel .ep-seg button.active { border-color: #555; }
+  #ep-panel #ep-model {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    font-size: 13px;
+  }
+  #ep-panel .ep-actions button {
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 120ms ease, border-color 120ms ease, box-shadow 120ms ease, color 120ms ease;
+  }
+  #ep-panel .ep-actions button:hover {
+    background: #f2f2f2;
+    border-color: #c7c7c7;
+  }
+  #ep-panel .ep-actions #ep-polish {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,.12);
+  }
+  #ep-panel .ep-actions #ep-polish:hover {
+    background: #1866ce;
+    border-color: #1866ce;
+  }
+  
+  /* Busy spinner overlay inside panel */
+  #ep-busy { display: none; }
+  #ep-busy .ep-spinner {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 3px solid rgba(0,0,0,.15);
+    border-top-color: #1a73e8;
+    animation: ep-spin .8s linear infinite;
+  }
+  @keyframes ep-spin { to { transform: rotate(360deg); } }
+  
+  /* Flash the updated editor region */
+  .ep-flash {
+    animation: ep-flash-bg .9s ease-out 1;
+  }
+  @keyframes ep-flash-bg {
+    0%   { background-color: #fff8c5; }
+    100% { background-color: transparent; }
+  }
+  
+  /* Post-actions bar */
+  #ep-post {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: flex;
+    gap: 8px;
+    z-index: 2147483646;
+  }
+  

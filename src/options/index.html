@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Email Polisher — Options</title>
+  </head>
+  <body style="font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; padding: 20px;">
+    <h2 style="margin-top:0">Email Polisher Settings</h2>
+    <label style="display:block; margin: 12px 0;">
+      OpenAI API Key<br />
+      <input id="k" type="password" placeholder="sk-..." style="width: 340px; padding: 6px;" />
+    </label>
+    <button id="save">Save</button>
+    <span id="ok" style="display:none; margin-left:8px;">Saved ✓</span>
+    <div id="status" style="display:none; margin-top:8px; color:#b00020;"></div>
+    <p style="color:#666; margin-top:16px;">
+      Your key is stored locally in Chrome storage. Draft text is sent directly from the extension to OpenAI.
+    </p>
+    <script type="module" src="./index.ts"></script>
+  </body>
+</html>
